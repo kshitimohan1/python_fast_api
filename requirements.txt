@@ -2,3 +2,4 @@ fastapi==0.95.2
 uvicorn==0.22.0
 sqlalchemy==2.0.15
 pymysql==1.0.3
+pydantic[email]
