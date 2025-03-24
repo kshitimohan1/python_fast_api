@@ -33,7 +33,7 @@ MYSQL_HOST = "127.0.0.1"  # Use 127.0.0.1 instead of localhost for Docker
 MYSQL_PORT = "3309"       # Updated port mapping
 MYSQL_DB = "employee_db"
 
-DATABASE_URL = "mysql+pymysql://bssuser:Bssuser@127.0.0.1:3309/employee_db"
+DATABASE_URL = "mysql+pymysql://bssuser:Bssuser@mysql-container:3309/employee_db"
 
 # Create Engine
 engine = create_engine(DATABASE_URL)
