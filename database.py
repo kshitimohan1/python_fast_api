@@ -28,7 +28,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 # MySQL Connection Details
 MYSQL_USER = "bssuser"
-MYSQL_PASSWORD = "Bssuser@123"
+MYSQL_PASSWORD = "Bssuser"
 MYSQL_HOST = "127.0.0.1"  # Use 127.0.0.1 instead of localhost for Docker
 MYSQL_PORT = "3309"       # Updated port mapping
 MYSQL_DB = "employee_db"
