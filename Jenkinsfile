@@ -16,6 +16,9 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
+                    // Ensure Docker Desktop context is correctly set
+                    sh 'docker context use default'
+
                     // Log in to Docker Hub securely using withCredentials
                     withCredentials([usernamePassword(credentialsId: '1', usernameVariable: 'DOCKER_HUB_USR', passwordVariable: 'DOCKER_HUB_PSW')]) {
                         sh "echo ${DOCKER_HUB_PSW} | docker login -u ${DOCKER_HUB_USR} --password-stdin"
