@@ -26,11 +26,12 @@ pipeline {
                     }
 
                     docker.build("${env.DOCKER_IMAGE}:latest")
-                    docker.build("${env.DOCKER_IMAGE}:${env.BUILD_ID}")
-
+//                     docker.build("${env.DOCKER_IMAGE}:${env.BUILD_ID}")
+                    docker.build("${env.DOCKER_IMAGE}:latest")
                     docker.withRegistry('https://registry.hub.docker.com', '1') {
                         docker.image("${env.DOCKER_IMAGE}:latest").push()
-                        docker.image("${env.DOCKER_IMAGE}:${env.BUILD_ID}").push()
+//                     docker.image("${env.DOCKER_IMAGE}:${env.BUILD_ID}").push()
+                        docker.image("${env.DOCKER_IMAGE}:latest").push()
                     }
                 }
             }
